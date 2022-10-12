@@ -23,7 +23,10 @@
     networkmanager.enable = true;
   };
 
-  time.timeZone = "Asia/Ho_Chi_Minh";
+  time = {
+    timeZone = "Asia/Ho_Chi_Minh";
+    hardwareClockInLocalTime = true;
+  };
 
   i18n = {
     defaultLocale = "en_US.utf8";
