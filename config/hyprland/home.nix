@@ -5,8 +5,6 @@
     ".config/hypr/hyprland.conf".text = ''
       monitor=DP-1,1920x1080@144,0x0,1
 
-      workspace=DP-1,1
-
       general {
         main_mod=SUPER
         border_size=2
@@ -19,7 +17,7 @@
       }
 
       decoration {
-        rounding=0
+        rounding=4
         multisample_edges=true
         active_opacity=1
         inactive_opacity=1
@@ -44,7 +42,6 @@
       master {
         special_scale_factor=0.5
         new_is_master=false
-        no_gaps_when_only=true
       }
 
       dwindle {
@@ -53,49 +50,56 @@
 
       bind=SUPER,Return,exec,${pkgs.alacritty}/bin/alacritty
       bind=SUPER,Space,exec,${pkgs.rofi-wayland}/bin/rofi -show drun
+      bind=SUPER,F,togglefloating,
       bind=SUPER,Q,killactive,
       bind=SUPER,Escape,exit,
 
-      bind=SUPER,left,movefocus,l
-      bind=SUPER,right,movefocus,r
-      bind=SUPER,up,movefocus,u
-      bind=SUPER,down,movefocus,d
+      bind=SUPER,1,workspace,1
+      bind=SUPER,2,workspace,2
+      bind=SUPER,3,workspace,3
+      bind=SUPER,4,workspace,4
+      bind=SUPER,5,workspace,5
+      bind=SUPER,6,workspace,6
+      bind=SUPER,7,workspace,7
+      bind=SUPER,8,workspace,8
+      bind=SUPER,9,workspace,9
+      bind=SUPER,0,workspace,10
+      bind=SUPER,right,workspace,+1
+      bind=SUPER,left,workspace,-1
 
-      bind=ALT,1,workspace,1
-      bind=ALT,2,workspace,2
-      bind=ALT,3,workspace,3
-      bind=ALT,4,workspace,4
-      bind=ALT,5,workspace,5
-      bind=ALT,6,workspace,6
-      bind=ALT,7,workspace,7
-      bind=ALT,8,workspace,8
-      bind=ALT,9,workspace,9
-      bind=ALT,0,workspace,10
-      bind=ALT,right,workspace,+1
-      bind=ALT,left,workspace,-1
+      bind=SUPERSHIFT,1,movetoworkspace,1
+      bind=SUPERSHIFT,2,movetoworkspace,2
+      bind=SUPERSHIFT,3,movetoworkspace,3
+      bind=SUPERSHIFT,4,movetoworkspace,4
+      bind=SUPERSHIFT,5,movetoworkspace,5
+      bind=SUPERSHIFT,6,movetoworkspace,6
+      bind=SUPERSHIFT,7,movetoworkspace,7
+      bind=SUPERSHIFT,8,movetoworkspace,8
+      bind=SUPERSHIFT,9,movetoworkspace,9
+      bind=SUPERSHIFT,0,movetoworkspace,10
+      bind=SUPERSHIFT,right,movetoworkspace,+1
+      bind=SUPERSHIFT,left,movetoworkspace,-1
 
-      bind=ALTSHIFT,1,movetoworkspace,1
-      bind=ALTSHIFT,2,movetoworkspace,2
-      bind=ALTSHIFT,3,movetoworkspace,3
-      bind=ALTSHIFT,4,movetoworkspace,4
-      bind=ALTSHIFT,5,movetoworkspace,5
-      bind=ALTSHIFT,6,movetoworkspace,6
-      bind=ALTSHIFT,7,movetoworkspace,7
-      bind=ALTSHIFT,8,movetoworkspace,8
-      bind=ALTSHIFT,9,movetoworkspace,9
-      bind=ALTSHIFT,0,movetoworkspace,10
-      bind=ALTSHIFT,right,movetoworkspace,+1
-      bind=ALTSHIFT,left,movetoworkspace,-1
+      bindm=SUPER,mouse:272,movewindow
+      bindm=SUPER,mouse:273,resizewindow
+
+      bind=ALT,left,movefocus,l
+      bind=ALT,right,movefocus,r
+      bind=ALT,up,movefocus,u
+      bind=ALT,down,movefocus,d
 
       bind=CTRL,right,resizeactive,20 0
       bind=CTRL,left,resizeactive,-20 0
       bind=CTRL,up,resizeactive,0 -20
       bind=CTRL,down,resizeactive,0 20
 
-      bindm=SUPER,mouse:272,movewindow
-      bindm=SUPER,mouse:273,resizewindow
-
       exec-once=${pkgs.waybar}/bin/waybar
+      exec-once=${pkgs.hyprpaper}/bin/hyprpaper
     '';
+    ".config/hypr/hyprpaper.conf".text = ''
+      preload = ~/.config/hypr/background.jpg
+      wallpaper = DP-1,~/.config/hypr/background.jpg
+    '';
+    ".config/hypr/background.jpg".source = ./background.jpg;
   };
 }

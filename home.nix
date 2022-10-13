@@ -38,6 +38,7 @@
       rofi-wayland
       waybar
       gammastep
+      hyprpaper
 
       # programming language management tool
       fnm

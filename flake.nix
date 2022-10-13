@@ -13,15 +13,21 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, hyprland }:
+  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, hyprpaper }:
   let
     system = "x86_64-linux";
     user = "tam-nd";
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [ hyprpaper.overlays.default ];
     };
   in {
     nixosConfigurations = {
