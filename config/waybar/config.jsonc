@@ -1,0 +1,29 @@
+{
+  "modules-right": ["custom/gammastep", "pulseaudio", "clock"],
+
+  // Module Left
+
+  // Module Right
+  "custom/gammastep": {
+    "format": "",
+    "on-click": "$HOME/.config/waybar/scripts/gamma.sh"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["奄", "奔", "墳"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": " {:%I:%M %p}",
+    "format-alt": " {:%a %b %d, %G}"
+  }
+}

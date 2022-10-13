@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ./config/hyprland
+      ./config/waybar
     ];
 
   boot = {

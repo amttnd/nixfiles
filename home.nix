@@ -3,6 +3,7 @@
 {
   imports = [
     ./config/hyprland/home.nix
+    ./config/waybar/home.nix
     ./config/rofi/home.nix
     ./config/git/home.nix
   ];
@@ -36,6 +37,7 @@
       # window manager stuff
       rofi-wayland
       waybar
+      gammastep
 
       # programming language management tool
       fnm

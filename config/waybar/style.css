@@ -1,0 +1,23 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: BlexMono Nerd Font Mono;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-gammastep,
+#pulseaudio,
+#clock {
+  color: @theme_text_color;
+  background: @theme_selected_bg_color;
+  margin: 4px;
+  padding: 0px 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}

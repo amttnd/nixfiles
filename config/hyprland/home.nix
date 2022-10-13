@@ -94,6 +94,8 @@
 
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
+
+      exec-once=${pkgs.waybar}/bin/waybar
     '';
   };
 }
