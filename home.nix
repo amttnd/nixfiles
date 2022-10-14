@@ -7,7 +7,6 @@
     ./config/rofi/home.nix
     ./config/git/home.nix
     ./config/zsh/home.nix
-    ./config/starship/home.nix
     ./config/alacritty/home.nix
   ];
 
@@ -49,7 +48,6 @@
 
       # shell
       zsh
-      starship
 
       # build essential
       gcc

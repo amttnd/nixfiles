@@ -6,6 +6,7 @@
       /etc/nixos/hardware-configuration.nix
       ./config/hyprland
       ./config/waybar
+      ./config/zsh
     ];
 
   boot = {
