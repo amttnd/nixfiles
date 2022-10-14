@@ -43,7 +43,6 @@
       waybar
       gammastep
       hyprpaper
-      flameshot
 
       # programming language management tool
       fnm
@@ -51,6 +50,9 @@
       # shell
       zsh
       starship
+
+      # build essential
+      gcc
     ];
 
     pointerCursor = {

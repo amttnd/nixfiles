@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,7 +22,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, hyprpaper }:
+  outputs = inputs @ { self, nixpkgs, nixos-hardware, home-manager, hyprland, hyprpaper }:
   let
     system = "x86_64-linux";
     user = "tam-nd";
@@ -43,7 +45,12 @@
             home-manager.extraSpecialArgs = { inherit user; };
             home-manager.users.${user} = import ./home.nix;
           }
-        ];
+        ] ++ (with nixos-hardware.nixosModules; [
+          common-pc
+          common-pc-ssd
+          common-cpu-amd
+          common-gpu-amd
+        ]);
       };
     };
   };

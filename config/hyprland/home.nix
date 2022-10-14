@@ -93,8 +93,6 @@
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
 
-      bind=,print,exec,${pkgs.flameshot}/bin/flameshot gui
-
       bind=,XF86AudioLowerVolume,exec,${pkgs.pamixer}/bin/pamixer -d 5
       bind=,XF86AudioRaiseVolume,exec,${pkgs.pamixer}/bin/pamixer -i 5
       bind=,XF86AudioMute,exec,${pkgs.pamixer}/bin/pamixer -t
