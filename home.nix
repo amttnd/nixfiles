@@ -18,6 +18,7 @@
       # cli tools
       btop
       neofetch
+      unzip
 
       # source control
       git
@@ -42,9 +43,6 @@
       waybar
       gammastep
       hyprpaper
-
-      # programming language management tool
-      fnm
 
       # shell
       zsh
