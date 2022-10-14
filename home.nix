@@ -6,6 +6,9 @@
     ./config/waybar/home.nix
     ./config/rofi/home.nix
     ./config/git/home.nix
+    ./config/zsh/home.nix
+    ./config/starship/home.nix
+    ./config/alacritty/home.nix
   ];
 
   home = {
@@ -44,6 +47,10 @@
 
       # programming language management tool
       fnm
+
+      # shell
+      zsh
+      starship
     ];
 
     pointerCursor = {

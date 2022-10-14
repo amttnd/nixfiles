@@ -16,9 +16,9 @@ colors:
     focused_match:
       foreground: '#44475a'
       background: '#ffb86c'
-    bar:
-      background: '#282a36'
-      foreground: '#f8f8f2'
+  footer_bar:
+    background: '#282a36'
+    foreground: '#f8f8f2'
   hints:
     start:
       foreground: '#282a36'
@@ -50,8 +50,17 @@ colors:
     magenta: '#ff92df'
     cyan: '#a4ffff'
     white: '#ffffff'
+
 font:
   normal:
     family: monospace
     style: Regular
   size: 12
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.15

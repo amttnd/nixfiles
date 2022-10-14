@@ -40,6 +40,7 @@
     isNormalUser = true;
     description = "Tam Nguyen";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
   };
 
   fonts = {
