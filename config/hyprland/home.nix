@@ -86,16 +86,6 @@
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
 
-      bind=ALT,left,movefocus,l
-      bind=ALT,right,movefocus,r
-      bind=ALT,up,movefocus,u
-      bind=ALT,down,movefocus,d
-
-      bind=CTRL,right,resizeactive,20 0
-      bind=CTRL,left,resizeactive,-20 0
-      bind=CTRL,up,resizeactive,0 -20
-      bind=CTRL,down,resizeactive,0 20
-
       exec-once=${pkgs.waybar}/bin/waybar
       exec-once=${pkgs.hyprpaper}/bin/hyprpaper
     '';
