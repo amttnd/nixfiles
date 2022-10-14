@@ -10,27 +10,22 @@ window#waybar {
   background: transparent;
 }
 
+#custom-gammastep,
+#pulseaudio,
+#clock {
+  background: @theme_selected_bg_color;
+}
+
 #workspaces button,
 #custom-gammastep,
 #pulseaudio,
 #clock {
   color: @theme_text_color;
-  background: @theme_selected_bg_color;
   margin: 2px 4px;
   padding: 0px 8px;
   border-radius: 10px;
 }
 
-@keyframes blink {
-  to {
-    background-color: @theme_bg_color;
-  }
-}
-
 #workspaces button.active {
-  animation-name: blink;
-  animation-duration: 0.8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background: @theme_selected_bg_color;
 }
