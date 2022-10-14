@@ -49,7 +49,10 @@
       }
 
       bind=SUPER,Return,exec,${pkgs.alacritty}/bin/alacritty
-      bind=SUPER,Space,exec,${pkgs.rofi-wayland}/bin/rofi -show drun
+
+      bind=SUPER,Space,exec,~/.config/rofi/launcher/script.sh
+      bind=SUPERSHIFT,Q,exec,~/.config/rofi/powermenu/script.sh
+
       bind=SUPER,F,togglefloating,
       bind=SUPER,Q,killactive,
       bind=SUPER,Escape,exit,

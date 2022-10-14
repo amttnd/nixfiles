@@ -1,11 +1,10 @@
 {
   "modules-right": ["custom/gammastep", "pulseaudio", "clock"],
 
-  // Module Left
-
   // Module Right
   "custom/gammastep": {
     "format": "",
+    "tooltip": false,
     "on-click": "$HOME/.config/waybar/scripts/gamma.sh"
   },
   "pulseaudio": {
