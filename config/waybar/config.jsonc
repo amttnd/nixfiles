@@ -1,5 +1,6 @@
 {
   "modules-left": ["wlr/workspaces"],
+  "modules-center": ["custom/weather"],
   "modules-right": ["custom/gammastep", "pulseaudio", "clock"],
 
   // Module Left
@@ -16,6 +17,11 @@
       "8": "八",
       "9": "九"
     }
+  },
+  // Module Center
+  "custom/weather": {
+    "exec": "curl 'https://wttr.in/Ho-Chi-Minh?format=3'",
+    "interval": 60
   },
   // Module Right
   "custom/gammastep": {
@@ -35,7 +41,7 @@
       "car": "",
       "default": ["", "奔", "墳"]
     },
-    "scroll-step": "5.0",
+    "scroll-step": 5.0,
     "on-click": "pavucontrol"
   },
   "clock": {
