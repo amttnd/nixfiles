@@ -48,9 +48,9 @@
         pseudotile=0
       }
 
-      windowrulev2=float,class:^(Alacritty)$
       windowrulev2=opacity 0.95,class:^(Alacritty)$
-      windowrulev2=size 800 400,class:^(Alacritty)$
+
+      windowrulev2=workspace 1,class:^(Alacritty)$
       windowrulev2=workspace 2,class:^(code-url-handler)$
       windowrulev2=workspace 3,class:^(google-chrome)$
       windowrulev2=workspace 4,class:^(brave-browser)$
