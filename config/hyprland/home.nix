@@ -48,6 +48,13 @@
         pseudotile=0
       }
 
+      windowrulev2=float,class:^(Alacritty)$
+      windowrulev2=opacity 0.95,class:^(Alacritty)$
+      windowrulev2=size 800 400,class:^(Alacritty)$
+      windowrulev2=workspace 2,class:^(code-url-handler)$
+      windowrulev2=workspace 3,class:^(google-chrome)$
+      windowrulev2=workspace 4,class:^(brave-browser)$
+
       bind=SUPER,Return,exec,${pkgs.alacritty}/bin/alacritty
 
       bind=SUPER,Space,exec,~/.config/rofi/launcher/script.sh
@@ -85,6 +92,12 @@
 
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow
+
+      bind=,print,exec,${pkgs.flameshot}/bin/flameshot gui
+
+      bind=,XF86AudioLowerVolume,exec,${pkgs.pamixer}/bin/pamixer -d 5
+      bind=,XF86AudioRaiseVolume,exec,${pkgs.pamixer}/bin/pamixer -i 5
+      bind=,XF86AudioMute,exec,${pkgs.pamixer}/bin/pamixer -t
 
       exec-once=${pkgs.waybar}/bin/waybar
       exec-once=${pkgs.hyprpaper}/bin/hyprpaper

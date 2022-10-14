@@ -25,6 +25,7 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
+    "format-muted": "",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -32,8 +33,9 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["奄", "奔", "墳"]
+      "default": ["", "奔", "墳"]
     },
+    "scroll-step": "5.0",
     "on-click": "pavucontrol"
   },
   "clock": {

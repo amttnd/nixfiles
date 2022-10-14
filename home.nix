@@ -33,21 +33,18 @@
 
       # video/audio
       pavucontrol
+      pamixer
 
       # window manager stuff
       rofi-wayland
       waybar
       gammastep
       hyprpaper
+      flameshot
 
       # programming language management tool
       fnm
     ];
-
-    sessionVariables = {
-      EDITOR = "nvim";
-      TERMINAL = "alacritty";
-    };
 
     pointerCursor = {
       name = "Dracula-cursors";
